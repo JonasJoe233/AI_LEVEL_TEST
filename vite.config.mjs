@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/AI_LEVEL_TEST/',
+  base: '/',
   build: { outDir: 'dist' },
   server: {
     fs: { deny: ['sbti-test-main'] }
