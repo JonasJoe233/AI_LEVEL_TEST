@@ -8,7 +8,154 @@
   <link rel="stylesheet" crossorigin href="/assets/index-Cj-WSLN3.css">
 </head>
 <body>
-  <!-- 所有 screen 结构，但不含任何 inline style 或 script -->
-  <!-- 四个 screen: #intro, #test, #judging, #result -->
+  <!-- ── INTRO ── -->
+  <div id="intro" class="screen active">
+    <div class="intro-eyebrow">AI TYPE INDICATOR</div>
+    <div class="intro-title">A<span>I</span>TI</div>
+    <div class="intro-subtitle">v1.0 · 20 QUESTIONS · ~3 MIN</div>
+    <div class="intro-rule"></div>
+    <div class="intro-desc">
+      四个维度，测你真实的 AI 使用水平。<br>
+      从 Lv.0 旁观者到 Lv.10 一人军团，<br>
+      你站在哪里？
+    </div>
+    <div class="intro-badges">
+      <span class="badge badge-common">普通</span>
+      <span class="badge badge-uncommon">稀有</span>
+      <span class="badge badge-rare">精英</span>
+      <span class="badge badge-epic">传说</span>
+      <span class="badge badge-legendary">神话</span>
+      <span class="badge badge-mythic">???</span>
+    </div>
+    <button class="btn-start" onclick="startTest()">开始测试</button>
+    <div class="intro-note">纯前端运行 · 答案不离开你的设备 · 仅供娱乐</div>
+  </div>
+
+  <!-- ── TEST ── -->
+  <div id="test" class="screen">
+    <div class="test-header">
+      <div class="test-meta">
+        <span class="test-label">AITI · AI TYPE INDICATOR</span>
+        <span class="test-count" id="test-count">1 / 20</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill" style="width:5%"></div>
+      </div>
+    </div>
+    <div class="test-body">
+      <div class="dim-tag" id="dim-tag">维度 · 可控性</div>
+      <div class="question-card">
+        <div class="question-text" id="question-text"></div>
+      </div>
+      <div class="options" id="options"></div>
+    </div>
+    <div class="test-footer">
+      <button class="btn-nav" id="btn-prev" onclick="prevQuestion()" style="display:none">← 上一题</button>
+      <button class="btn-nav btn-next" id="btn-next" onclick="nextQuestion()" disabled>下一题 →</button>
+    </div>
+  </div>
+
+  <!-- ── JUDGING ── -->
+  <div id="judging" class="screen">
+    <div class="judging-visual">
+      <div class="j-ring j-ring-1"></div>
+      <div class="j-ring j-ring-2"></div>
+      <div class="j-ring j-ring-3"></div>
+      <div class="j-dot">🧠</div>
+    </div>
+    <div class="judging-title">正在分析你的 AI 灵魂</div>
+    <div class="judging-sub">扫描四维度数据<span class="judging-dots"></span></div>
+  </div>
+
+  <!-- ── RESULT ── -->
+  <div id="result" class="screen">
+    <!-- Hero -->
+    <div class="result-hero" id="result-hero">
+      <div class="hero-noise"></div>
+      <div class="hero-kicker">你的 AITI 人格类型</div>
+      <span class="hero-emoji" id="persona-emoji"></span>
+      <div class="hero-code" id="persona-code"></div>
+      <div class="hero-cn" id="persona-cn"></div>
+      <div class="hero-intro" id="persona-intro"></div>
+      <div class="hero-badge">
+        <span class="hero-level" id="level-num">Lv.0</span>
+        <div class="hero-divider"></div>
+        <span class="hero-rarity-text" id="level-rarity">普通</span>
+      </div>
+    </div>
+    <div class="hero-pct" id="level-pct"></div>
+
+    <!-- Easter note -->
+    <div id="easter-note-wrap"></div>
+
+    <!-- Four dimension bars -->
+    <div class="result-card">
+      <div class="card-header"><div class="card-title">四维分析</div></div>
+      <div class="dims-content">
+        <div class="dim-row">
+          <div class="dim-name">可控性</div>
+          <div class="dim-bar-wrap"><div class="dim-bar-fill" id="bar-C" style="width:0%"></div></div>
+          <div class="dim-rating" id="rating-C">—</div>
+        </div>
+        <div class="dim-row">
+          <div class="dim-name">广度</div>
+          <div class="dim-bar-wrap"><div class="dim-bar-fill" id="bar-B" style="width:0%"></div></div>
+          <div class="dim-rating" id="rating-B">—</div>
+        </div>
+        <div class="dim-row">
+          <div class="dim-name">形态</div>
+          <div class="dim-bar-wrap"><div class="dim-bar-fill" id="bar-F" style="width:0%"></div></div>
+          <div class="dim-rating" id="rating-F">—</div>
+        </div>
+        <div class="dim-row">
+          <div class="dim-name">角色</div>
+          <div class="dim-bar-wrap"><div class="dim-bar-fill" id="bar-R" style="width:0%"></div></div>
+          <div class="dim-rating" id="rating-R">—</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Persona description -->
+    <div class="result-card">
+      <div class="card-header"><div class="card-title">人格描述</div></div>
+      <div class="persona-desc-content">
+        <div class="persona-desc-text" id="persona-desc"></div>
+      </div>
+    </div>
+
+    <!-- Dimension detail -->
+    <div class="section-label mt-section">维度解读</div>
+    <div class="result-card">
+      <div class="card-header"><div class="card-title">维度解读</div></div>
+      <div id="dims-detail"></div>
+    </div>
+
+    <!-- Actions -->
+    <div class="result-actions">
+      <button class="btn-share" onclick="downloadCard()">📤 生成分享卡片</button>
+      <button class="btn-restart" onclick="restart()">重新测试</button>
+    </div>
+  </div>
+
+  <!-- ── SHARE CARD (off-screen, for canvas) ── -->
+  <div id="share-card">
+    <div class="sc-hero" id="sc-hero">
+      <div class="sc-hero-overlay" id="sc-hero-overlay"></div>
+      <div class="sc-content">
+        <div class="sc-logo">AITI · AI TYPE INDICATOR</div>
+        <div id="sc-emoji"></div>
+        <div id="sc-code"></div>
+        <div id="sc-cn"></div>
+        <div id="sc-intro"></div>
+      </div>
+    </div>
+    <div class="sc-body">
+      <div class="sc-dims" id="sc-dims"></div>
+    <div class="sc-footer">
+        <div class="sc-rarity" id="sc-rarity-label"></div>
+        <div id="sc-level-badge"></div>
+        <div class="sc-brand">AITI.TEST</div>
+      </div>
+  </div>
 </body>
 </html>
