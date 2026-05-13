@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(open /Users/qiaoguanyu01/Vibe_Coding/AI_Level_test/index.html)",
+      "Bash(node -e ' *)"
+    ]
+  }
+}

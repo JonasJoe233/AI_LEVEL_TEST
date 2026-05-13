@@ -1,0 +1,1479 @@
+{
+  "chrome": {
+    "intro": {
+      "eyebrow": "SBTI",
+      "title": "Silly Big Personality Test - tes kepribadian bercanda yang memparodikan MBTI",
+      "subtitle": "Tanpa sains, tapi penuh candaan soal diri sendiri, kekacauan, dan hasil yang pengin langsung dibagikan.",
+      "start": "Mulai Tes SBTI",
+      "secondary": "Langsung ke tes",
+      "creditTitle": "Catatan",
+      "credits": [
+        "Dibuat cuma untuk seru-seruan. Jangan dimasukkan ke hati."
+      ]
+    },
+    "test": {
+      "hiddenDimension": "Dimensi disembunyikan",
+      "specialQuestion": "Pertanyaan tambahan",
+      "progressPattern": "{done} / {total}",
+      "questionPattern": "Pertanyaan {index}",
+      "incompleteHint": "Kamu baru bisa lanjut setelah semua pertanyaan dijawab. Dunia sudah cukup berantakan, jadi setidaknya selesaikan tes ini dulu.",
+      "completeHint": "Selesai. Sekarang jiwa elektronikmu siap diadili di halaman hasil.",
+      "judgingCountdownPattern": "Sedang menghakimi jiwa elektronikmu...",
+      "backHome": "Kembali ke beranda",
+      "previous": "Pertanyaan sebelumnya",
+      "next": "Pertanyaan berikutnya",
+      "submit": "Kirim dan lihat hasil"
+    },
+    "result": {
+      "modeKicker": "Tipe utamamu",
+      "analysisTitle": "Bacaan singkat tipe ini",
+      "dimensionsTitle": "Analisis 15 dimensi",
+      "noteTitle": "Pengingat ramah",
+      "regularNote": "Tes ini murni untuk hiburan. Jangan dipakai sebagai diagnosis, penyaring wawancara, penentu hubungan, alasan putus, pemanggilan arwah, ramalan, atau vonis hidup. Silakan tertawa, tapi jangan dipercaya mentah-mentah.",
+      "specialNote": "Tes ini dibuat untuk seru-seruan. Tipe tersembunyi dan jalur cadangan absurd adalah jebakan yang sengaja dipasang pembuatnya. Jangan jadikan ini dasar untuk kedokteran, psikologi, fisiognomi, numerologi, atau hal gaib.",
+      "restart": "Tes lagi",
+      "backToHome": "Kembali ke beranda",
+      "authorTitle": "Catatan kreator",
+      "authorOpen": "Buka",
+      "authorClose": "Tutup",
+      "authorParagraphs": [
+        "Tes ini pertama kali diposting oleh kreator Bilibili @蛆肉儿串儿 (UID417038183). Awalnya cuma dibuat untuk membujuk seorang teman yang suka minum agar berhenti.",
+        "Karena pembuatnya pada dasarnya adalah sinis tipe SHIT, semua orang kena roast secara merata. Maaf duluan. Tapi dia juga mengaku sebagai kecantikan tiada tanding, jadi mungkin kamu tetap akan memaafkannya.",
+        "Aku belum berhasil menyeimbangkan unsur hiburan dan keseriusan secara sempurna, jadi beberapa penjelasan tipe bisa terasa samar atau kurang akurat. Kalau ada yang terlalu menohok, maaf ya.",
+        "Waktu dan tenaga terbatas, jadi versi yang bisa dimainkan ini dirilis dulu. Nanti akan terus dibenahi. Tolong jangan dipakai untuk cari untung."
+      ],
+      "hiddenOverrideKicker": "Tipe tersembunyi aktif",
+      "hiddenOverrideBadge": "Kecocokan 100% · Faktor anomali alkohol mengambil alih sistem",
+      "hiddenOverrideSub": "Afinitasmu terhadap etanol terlalu tinggi, jadi sistem langsung melewati penilaian tipe normal.",
+      "fallbackKicker": "Fallback sistem aktif",
+      "fallbackBadgePattern": "Kecocokan tertinggi di pustaka tipe standar cuma {similarity}%",
+      "fallbackSub": "Pustaka tipe standar menyerah total menghadapi rangkaian otakmu, jadi sistem memaksa memasukkanmu ke HHHH.",
+      "regularBadgePattern": "Kecocokan {similarity}% · Tepat di {exact}/15 dimensi",
+      "regularSub": "Tingkat kecocokan antar dimensi cukup tinggi, jadi hasil ini bisa dianggap sebagai potret kepribadian utamamu saat ini.",
+      "scorePattern": "{level} / {score} poin",
+      "resultNamePattern": "{code} ({name})"
+    }
+  },
+  "defaultLocale": "zh",
+  "dimensionMeta": {
+    "S1": {
+      "name": "S1 Harga diri dan kepercayaan diri",
+      "model": "model diri"
+    },
+    "S2": {
+      "name": "S2 Kejelasan diri",
+      "model": "model diri"
+    },
+    "S3": {
+      "name": "S3 Nilai inti",
+      "model": "model diri"
+    },
+    "E1": {
+      "name": "E1 Rasa aman dalam keterikatan",
+      "model": "model emosi"
+    },
+    "E2": {
+      "name": "E2 Keterlibatan emosional",
+      "model": "model emosi"
+    },
+    "E3": {
+      "name": "E3 Batas dan ketergantungan",
+      "model": "model emosi"
+    },
+    "A1": {
+      "name": "A1 Kecenderungan pandangan hidup",
+      "model": "model sikap"
+    },
+    "A2": {
+      "name": "A2 Aturan dan fleksibilitas",
+      "model": "model sikap"
+    },
+    "A3": {
+      "name": "A3 Rasa makna hidup",
+      "model": "model sikap"
+    },
+    "Ac1": {
+      "name": "Ac1 Orientasi motivasi",
+      "model": "model penggerak tindakan"
+    },
+    "Ac2": {
+      "name": "Ac2 Gaya pengambilan keputusan",
+      "model": "model penggerak tindakan"
+    },
+    "Ac3": {
+      "name": "Ac3 Gaya eksekusi",
+      "model": "model penggerak tindakan"
+    },
+    "So1": {
+      "name": "So1 Inisiatif sosial",
+      "model": "model sosial"
+    },
+    "So2": {
+      "name": "So2 Rasa batas antarpribadi",
+      "model": "model sosial"
+    },
+    "So3": {
+      "name": "So3 Ekspresi dan keaslian",
+      "model": "model sosial"
+    }
+  },
+  "dimensionOrder": [
+    "S1",
+    "S2",
+    "S3",
+    "E1",
+    "E2",
+    "E3",
+    "A1",
+    "A2",
+    "A3",
+    "Ac1",
+    "Ac2",
+    "Ac3",
+    "So1",
+    "So2",
+    "So3"
+  ],
+  "dimExplanations": {
+    "S1": {
+      "L": "Kamu lebih keras pada diri sendiri daripada orang lain; dipuji dua kalimat saja rasanya ingin cek dulu itu tulus atau tidak.",
+      "M": "Rasa percaya diri naik-turun mengikuti cuaca: saat angin mendukung bisa terbang, saat melawan angin mundur duluan.",
+      "H": "Di dalam hati cukup paham diri sendiri, tidak mudah buyar hanya karena satu komentar orang lewat."
+    },
+    "S2": {
+      "L": "Saluran batin penuh noise, sering buffering berulang di pertanyaan \"aku ini siapa\".",
+      "M": "Biasanya masih bisa mengenali diri sendiri, tapi sesekali emosi mengambil alih akun sementara.",
+      "H": "Cukup jelas membaca temperamen, keinginan, dan batas bawah diri sendiri."
+    },
+    "S3": {
+      "L": "Lebih peduli pada nyaman dan aman; hidup tidak perlu tiap hari dipaksa mode sprint.",
+      "M": "Ingin maju, tapi juga ingin rebahan sebentar; urutan nilai di dalam diri sering rapat internal.",
+      "H": "Mudah terdorong oleh tujuan, pertumbuhan, atau suatu keyakinan penting."
+    },
+    "E1": {
+      "L": "Alarm dalam hubungan sangat sensitif; dibaca tapi tidak dibalas pun sudah bisa membayangkan ending besar.",
+      "M": "Setengah percaya, setengah menguji; di hati sering ada tarik-ulur.",
+      "H": "Lebih mau percaya pada hubungan itu sendiri, tidak langsung buyar karena sedikit tanda-tanda kecil."
+    },
+    "E2": {
+      "L": "Keterlibatan emosi cenderung ditahan; bukan pintu hati tidak terbuka, tapi akses masuknya terlalu ketat.",
+      "M": "Bisa terlibat, tapi tetap menyisakan jalan cadangan untuk diri sendiri, tidak sampai all-in total.",
+      "H": "Begitu sudah yakin, mudah serius; emosi dan energi diberikan cukup penuh."
+    },
+    "E3": {
+      "L": "Mudah menempel dan mudah ditempeli; rasa hangat dalam hubungan sangat penting.",
+      "M": "Butuh sedikit kedekatan dan sedikit kemandirian, tipe ketergantungan yang bisa diatur.",
+      "H": "Ruang pribadi sangat penting; sebesar apa pun cinta, tetap harus ada sebidang tempat untuk diri sendiri."
+    },
+    "A1": {
+      "L": "Melihat dunia dengan filter defensif bawaan: curiga dulu, baru mendekat.",
+      "M": "Tidak polos, tapi juga bukan penganut konspirasi total; menunggu dan mengamati adalah instingmu.",
+      "H": "Lebih mau percaya pada kemanusiaan dan niat baik; saat ada masalah tidak buru-buru menjatuhkan vonis mati pada dunia."
+    },
+    "A2": {
+      "L": "Aturan kalau bisa diputar ya diputar; nyaman dan bebas sering berada di depan.",
+      "M": "Saat perlu patuh ya patuh, saat perlu luwes juga tidak ngotot.",
+      "H": "Rasa tertib cukup kuat; kalau bisa mengikuti alur, tidak suka meledakkan panggung dengan improvisasi."
+    },
+    "A3": {
+      "L": "Rasa makna cenderung rendah, mudah merasa banyak hal seperti cuma melewati adegan.",
+      "M": "Kadang punya tujuan, kadang ingin menyerah santai; pandangan hidup sedang setengah menyala.",
+      "H": "Saat melakukan sesuatu lebih punya arah, kira-kira tahu ingin bergerak ke mana."
+    },
+    "Ac1": {
+      "L": "Sebelum bertindak, yang dipikirkan dulu adalah jangan sampai terguling; sistem hindar risiko menyala sebelum ambisi.",
+      "M": "Kadang ingin menang, kadang hanya ingin tidak repot; motivasinya cukup campur.",
+      "H": "Lebih mudah menyala karena hasil, pertumbuhan, dan rasa sedang mendorong sesuatu maju."
+    },
+    "Ac2": {
+      "L": "Sebelum memutuskan mudah muter beberapa putaran; rapat di kepala sering lewat batas waktu.",
+      "M": "Akan berpikir, tapi tidak sampai mesin mati; ini ragu-ragu normal.",
+      "H": "Cepat mengetuk palu, setelah memutuskan tidak suka balik lagi bertele-tele."
+    },
+    "Ac3": {
+      "L": "Eksekusi dan deadline punya hubungan mendalam; makin mepet, makin terasa seperti akan bangkit.",
+      "M": "Bisa mengerjakan, tapi kondisi tergantung waktu; kadang stabil, kadang rebahan.",
+      "H": "Dorongan untuk membuat sesuatu benar-benar jadi cukup kuat; kalau belum mendarat rasanya seperti ada duri di hati."
+    },
+    "So1": {
+      "L": "Pemanasan sosial lambat; untuk maju duluan biasanya perlu mengumpulkan tenaga cukup lama.",
+      "M": "Kalau ada yang datang ya disambut, kalau tidak ada juga tidak memaksa; kelenturan sosial sedang.",
+      "H": "Lebih mau membuka suasana terlebih dahulu, di keramaian tidak terlalu takut tampil."
+    },
+    "So2": {
+      "L": "Dalam hubungan lebih ingin dekat dan melebur; kalau sudah akrab mudah memasukkan orang ke lingkar dalam.",
+      "M": "Ingin dekat tapi juga ingin menyisakan celah; rasa batas menyesuaikan orangnya.",
+      "H": "Rasa batas cukup kuat; kalau terlalu dekat, instingnya mundur setengah langkah dulu."
+    },
+    "So3": {
+      "L": "Ekspresi lebih langsung; kalau ada sesuatu di hati, biasanya tidak suka memutar.",
+      "M": "Bisa bicara mengikuti suasana; kebenaran dan kepantasan biasanya masing-masing diberi ruang sedikit.",
+      "H": "Lebih mahir mengganti mode diri di berbagai situasi; rasa autentik diberikan bertingkat-tingkat."
+    }
+  },
+  "drunkTriggerQuestionId": "drink_gate_q2",
+  "imagePaths": {
+    "IMSB": "/sbti/types/id/IMSB.png",
+    "BOSS": "/sbti/types/id/BOSS.png",
+    "MUM": "/sbti/types/id/MUM.png",
+    "FAKE": "/sbti/types/id/FAKE.png",
+    "Dior-s": "/sbti/types/id/Dior-s.png",
+    "DEAD": "/sbti/types/id/DEAD.png",
+    "ZZZZ": "/sbti/types/id/ZZZZ.png",
+    "GOGO": "/sbti/types/id/GOGO.png",
+    "FUCK": "/sbti/types/id/FUCK.png",
+    "CTRL": "/sbti/types/id/CTRL.png",
+    "HHHH": "/sbti/types/id/HHHH.png",
+    "SEXY": "/sbti/types/id/SEXY.png",
+    "OJBK": "/sbti/types/id/OJBK.png",
+    "JOKE-R": "/sbti/types/id/JOKE-R.png",
+    "POOR": "/sbti/types/id/POOR.png",
+    "OH-NO": "/sbti/types/id/OH-NO.png",
+    "MONK": "/sbti/types/id/MONK.png",
+    "SHIT": "/sbti/types/id/SHIT.png",
+    "THAN-K": "/sbti/types/id/THAN-K.png",
+    "MALO": "/sbti/types/id/MALO.png",
+    "ATM-er": "/sbti/types/id/ATM-er.png",
+    "THIN-K": "/sbti/types/id/THIN-K.png",
+    "SOLO": "/sbti/types/id/SOLO.png",
+    "LOVE-R": "/sbti/types/id/LOVE-R.png",
+    "WOC!": "/sbti/types/id/WOC!.png",
+    "DRUNK": "/sbti/types/id/DRUNK.png",
+    "IMFW": "/sbti/types/id/IMFW.png"
+  },
+  "locale": "id",
+  "meta": {
+    "description": "Ikuti tes SBTI online dalam 3 sampai 5 menit, jawab 30 pertanyaan, lalu dapatkan hasil kepribadian SBTI yang bercanda soal diri sendiri dan mudah dikenali temanmu.",
+    "title": "Tes SBTI | Tes Kepribadian SBTI Online",
+    "urlPath": "/id/"
+  },
+  "normalTypes": [
+    {
+      "code": "CTRL",
+      "pattern": "HHH-HMH-MHH-HHH-MHM"
+    },
+    {
+      "code": "ATM-er",
+      "pattern": "HHH-HHM-HHH-HMH-MHL"
+    },
+    {
+      "code": "Dior-s",
+      "pattern": "MHM-MMH-MHM-HMH-LHL"
+    },
+    {
+      "code": "BOSS",
+      "pattern": "HHH-HMH-MMH-HHH-LHL"
+    },
+    {
+      "code": "THAN-K",
+      "pattern": "MHM-HMM-HHM-MMH-MHL"
+    },
+    {
+      "code": "OH-NO",
+      "pattern": "HHL-LMH-LHH-HHM-LHL"
+    },
+    {
+      "code": "GOGO",
+      "pattern": "HHM-HMH-MMH-HHH-MHM"
+    },
+    {
+      "code": "SEXY",
+      "pattern": "HMH-HHL-HMM-HMM-HLH"
+    },
+    {
+      "code": "LOVE-R",
+      "pattern": "MLH-LHL-HLH-MLM-MLH"
+    },
+    {
+      "code": "MUM",
+      "pattern": "MMH-MHL-HMM-LMM-HLL"
+    },
+    {
+      "code": "FAKE",
+      "pattern": "HLM-MML-MLM-MLM-HLH"
+    },
+    {
+      "code": "OJBK",
+      "pattern": "MMH-MMM-HML-LMM-MML"
+    },
+    {
+      "code": "MALO",
+      "pattern": "MLH-MHM-MLH-MLH-LMH"
+    },
+    {
+      "code": "JOKE-R",
+      "pattern": "LLH-LHL-LML-LLL-MLM"
+    },
+    {
+      "code": "WOC!",
+      "pattern": "HHL-HMH-MMH-HHM-LHH"
+    },
+    {
+      "code": "THIN-K",
+      "pattern": "HHL-HMH-MLH-MHM-LHH"
+    },
+    {
+      "code": "SHIT",
+      "pattern": "HHL-HLH-LMM-HHM-LHH"
+    },
+    {
+      "code": "ZZZZ",
+      "pattern": "MHL-MLH-LML-MML-LHM"
+    },
+    {
+      "code": "POOR",
+      "pattern": "HHL-MLH-LMH-HHH-LHL"
+    },
+    {
+      "code": "MONK",
+      "pattern": "HHL-LLH-LLM-MML-LHM"
+    },
+    {
+      "code": "IMSB",
+      "pattern": "LLM-LMM-LLL-LLL-MLM"
+    },
+    {
+      "code": "SOLO",
+      "pattern": "LML-LLH-LHL-LML-LHM"
+    },
+    {
+      "code": "FUCK",
+      "pattern": "MLL-LHL-LLM-MLL-HLH"
+    },
+    {
+      "code": "DEAD",
+      "pattern": "LLL-LLM-LML-LLL-LHM"
+    },
+    {
+      "code": "IMFW",
+      "pattern": "LLH-LHL-LML-LLL-MLL"
+    }
+  ],
+  "pageCopy": {
+    "intro": {
+      "heroTitle": "Tes SBTI | Tes Kepribadian SBTI Online",
+      "heroSubtitle": "Ikuti tes SBTI online dalam 3 sampai 5 menit, jawab 30 pertanyaan, lalu dapatkan hasil kepribadian SBTI yang bercanda soal diri sendiri dan mudah dikenali temanmu.",
+      "whatIsTitle": "Apa itu tes SBTI?",
+      "whatIsBody": "Tes SBTI, juga dikenal sebagai tes kepribadian SBTI, lebih tepat dipahami sebagai kuis bercanda soal diri sendiri, bukan alat psikometri yang serius. Ia memakai format yang familier, yaitu menjawab pertanyaan lalu mendapatkan tipe, dan memakai MBTI sebagai pintu masuk yang mudah, tetapi yang sebenarnya diatur adalah keadaanmu saat ini, rasa kena secara emosional, dan ekspresi diri khas internet yang mudah dibagikan.",
+      "mbtiRelationTitle": "Apa hubungan SBTI dengan MBTI?",
+      "mbtiRelationBody": "SBTI berhubungan dengan MBTI, tetapi bukan versi murahan maupun pengganti. MBTI lebih dekat ke eksplorasi diri yang terstruktur dan preferensi komunikasi. SBTI lebih dekat ke ekspresi diri, keadaan saat ini, dan kebiasaan berbagi dalam konteks internet.",
+      "whyTestTitle": "Kenapa harus ikut tes SBTI?",
+      "whyTestBody": "Cocok saat kamu ingin melihat keadaanmu sekarang dengan cara yang lebih ringan. Hasilnya cepat, bahasanya tajam, dan enak dipakai baik untuk refleksi pribadi maupun dikirim ke teman yang pasti langsung bilang, “ini kamu banget”.",
+      "suitableTitle": "Tes SBTI cocok untuk siapa?",
+      "suitableBody": "SBTI cocok untuk orang yang ingin mengamati diri secara ringan tanpa menganggap tes kepribadian sebagai diagnosis. Baik kamu sudah mengenal MBTI, sedang mencari bahasa yang lebih dekat dengan keadaanmu sekarang, atau baru pertama mencoba kuis seperti ini, SBTI bisa menjadi pintu masuk untuk bercanda soal diri sendiri yang mudah dibahas dan dibagikan.",
+      "aboutCta": "Pelajari lebih lanjut tentang tes SBTI",
+      "viewAllTypesCta": "Lihat semua kepribadian"
+    },
+    "resultExpiryBar": {
+      "before": "Masa berlaku",
+      "highlight": "laporan pribadi Anda",
+      "after": "segera habis"
+    },
+    "lockedAnalysis": {
+      "sectionTitle": "Analisis lengkap",
+      "checkoutProductLabel": "Hasil tes SBTI",
+      "previewDescription": "",
+      "hookEyebrow": "Mulai dari kalimat yang paling kena",
+      "hookTitle": "",
+      "hookUnlockTitle": "",
+      "hookUnlockBody": "",
+      "hookSummaryFallback": "Yang biasanya membuatmu macet bukan karena kamu kurang peduli, tetapi karena kamu terlalu cepat ingin menenangkan hubungan sebelum memberinya ruang bernapas.",
+      "structurePreviewBody": "",
+      "emotionalHookTitle": "",
+      "verifyingButton": "Sedang memverifikasi catatan tes...",
+      "retakeButton": "Kerjakan tes lagi, lalu buka hasil lengkap",
+      "secondaryShareCta": "Kalau mau lebih murah, bisa juga",
+      "lockHint": "Bayar untuk melihat hasil lengkap",
+      "unlockToast": "Analisis lengkap berhasil dibuka",
+      "summaryPreview": "Ringkasan hasil dan tipe terdekat",
+      "summaryPreviewHint": "Ciri yang paling menonjol",
+      "closestPreviewHint": "Tiga hasil yang paling dekat",
+      "deepProfilePreview": "Ringkasan pola pribadimu",
+      "deepProfilePreviewHint": "Ciri yang paling cepat muncul",
+      "personalizedSectionsPreviewHint": "Tarik-ulur batin yang paling sering terasa",
+      "compatibilityPreview": "Kecenderungan relasi dan kecocokan",
+      "compatibilityPreviewHint": "Analisis kecocokan relasi",
+      "dimensionsPreview": "Peta 15 dimensi pribadimu",
+      "dimensionsPreviewHint": "Grafik sebaran 15 dimensi",
+      "dimensionGroupsPreviewHint": "Pembacaan rinci 15 dimensi",
+      "comboPreview": "Latar tipe dan lampiran kombinasi",
+      "comboPreviewHint": "Kombinasi SBTI × MBTI",
+      "priceLabel": "Analisis lengkap untuk hasil ini",
+      "originalPriceLabel": "Harga asli",
+      "discountHint": "Bagikan sekali, lalu kembali untuk harga diskon",
+      "discountApplied": "Diskon diterapkan",
+      "viewFullResultButton": "Bagikan hasil",
+      "payButton": "Bayar untuk melihat hasil lengkap",
+      "payingButton": "Memproses...",
+      "typePageTitle": "",
+      "typePageDescription": "",
+      "typePageCta": "Mulai tes SBTI",
+      "typePageHint": ""
+    },
+    "fullResult": {
+      "heroKicker": "Analisis lengkap",
+      "resultHeroSummary": "Bagian ini menyorot nuansa yang paling kentara dari hasilmu kali ini, lalu membongkar struktur di baliknya sedikit demi sedikit.",
+      "resultHeroBody": "Fokusnya bukan menempelkan label sekali lagi, melainkan menjelaskan kenapa kamu terlihat seperti ini sekarang.",
+      "resultFlowTitle": "Arah yang paling kelihatan kali ini",
+      "resultFlowBody": "Hasil ini bukan profil yang menyebar rata. Ada beberapa sisi yang jauh lebih menonjol, jadi kesannya terasa cukup terarah.",
+      "resultStoryTitle": "Kenapa hasilnya jatuh ke tipe ini",
+      "resultStoryBody": "Yang biasanya terasa kena justru bukan nama tipenya, melainkan cara hasil ini menangkap pola reaksimu yang paling stabil belakangan ini.",
+      "resultMoodTitle": "Kesan pertama yang kamu bawa sekarang",
+      "resultMoodBody": "Ini lebih dekat ke pola reaksimu akhir-akhir ini, bukan persona tetap yang tidak pernah berubah.",
+      "resultUnlockTitle": "Apa lagi yang dijelaskan laporan lengkap",
+      "resultUnlockBody": "Lanjut ke bawah, kamu akan melihat tinggi-rendahnya 15 dimensi, kecenderungan relasi, dan titik tarik-ulur yang paling konkret dalam hasil ini.",
+      "leaderboardTitle": "Kalau mau memasukkan hasil ini ke papan peringkat",
+      "leaderboardBody": "Kalau kamu ingin hasil ini dihitung ke ranking total, kirim dari sini saja. Ini hanya aksi tambahan dan tidak memengaruhi laporanmu.",
+      "strongestLabel": "Sisi yang paling menonjol",
+      "weakestLabel": "Sisi yang paling ditahan",
+      "closestLabel": "3 hasil yang paling dekat",
+      "closestFallback": "Kali ini tidak ada hasil alternatif yang cukup dekat untuk ditampilkan.",
+      "coverCardTitle": "Kartu hasil kali ini",
+      "coverSummaryTitle": "Ringkasan tipe",
+      "verdictEyebrow": "Kesimpulan dulu",
+      "verdictTitle": "Bacaan paling jelas dari hasil kali ini",
+      "verdictBody": "",
+      "overviewTitle": "Paling kuat / paling ditahan / hasil terdekat",
+      "overviewBody": "",
+      "whyThisResultEyebrow": "Kenapa hasilnya jadi ini",
+      "whyThisResultTitle": "Kenapa kali ini kamu jatuh ke hasil ini",
+      "whyThisResultBody": "",
+      "dimensionRadarEyebrow": "Bentuk hasil",
+      "dimensionRadarTitle": "Sebaran 15 dimensi",
+      "dimensionRadarBody": "",
+      "dimensionRadarFootnote": "Justru karena jarak naik-turunnya setinggi ini, pembacaan di bawah terasa lebih dekat dengan cara kamu bereaksi sekarang daripada sekadar pengantar tipe yang umum.",
+      "personalizedHintTitle": "Bagian ini ditulis dari jawabanmu kali ini",
+      "personalizedHintBody": "Skor dan penjelasan di sini mengikuti jawabanmu pada sesi ini. Orang dengan tipe yang sama belum tentu melihat paragraf yang sama.",
+      "scenePanelsEyebrow": "Kalau dimasukkan ke situasi nyata",
+      "scenePanelsTitle": "Versi dirimu kali ini akan muncul seperti apa di situasi konkret",
+      "scenePanelsBody": "",
+      "misreadAndRiskEyebrow": "Salah baca yang paling gampang muncul",
+      "misreadAndRiskTitle": "Orang lain paling sering salah baca kamu di mana, dan kamu paling gampang macet di titik mana",
+      "misreadAndRiskBody": "Bagian ini bukan daftar kelebihan dan kekurangan, melainkan salah baca dan titik macet yang paling mungkin terasa di kehidupan nyata.",
+      "adjustmentAdviceEyebrow": "Penyesuaian kecil",
+      "adjustmentAdviceTitle": "Kalau belakangan kamu sering mentok, mulai dari tiga penyesuaian ini",
+      "adjustmentAdviceBody": "",
+      "dimensionGroupsEyebrow": "Baca 15 dimensi satu per satu",
+      "dimensionGroupsTitle": "Di antara 15 dimensi ini, bagian mana yang paling terasa berat",
+      "dimensionGroupsBody": "Kalau tiap kelompok dilihat terpisah, kamu akan lebih mudah membedakan mana nada dasar yang cukup menetap dan mana yang cuma sedang naik atau turun pada sesi ini.",
+      "bottomActionsEyebrow": "Langkah berikutnya",
+      "bottomActionsTitle": "Pilih langkah berikutnya di sini",
+      "bottomActionsBody": "Dari sini kamu bisa membuka halaman detail tipe, mengulang tes, atau kembali ke beranda.",
+      "snapshotMissingTitle": "Snapshot personal kali ini tidak tersimpan",
+      "snapshotMissingBody": "Karena jawaban kali ini tidak tersimpan sebagai snapshot, bagian di bawah untuk sementara memakai gambaran jangka panjang dari tipe ini.",
+      "backgroundEyebrow": "Latar tipe",
+      "backgroundTitle": "Gambaran jangka panjang tipe ini",
+      "backgroundBody": "Bagian di bawah lebih dekat ke pola umum tipe ini dalam relasi, interaksi, dan kombinasi. Cocok dipakai untuk membandingkan hasil kali ini dengan warna dasarnya."
+    },
+    "test": {
+      "resultArtwork": "Kartu kepribadian",
+      "resultProfile": "Lihat profil",
+      "submitToLeaderboard": "Kirim ke Papan Peringkat",
+      "submittedToLeaderboard": "Terkirim!",
+      "viewLeaderboard": "Lihat Papan Peringkat",
+      "submitting": "Mengirim..."
+    },
+    "testSeo": {
+      "heroTitle": "Tes SBTI online: mulai tes kepribadian",
+      "heroSummary": "Tanpa sains, cuma candaan soal diri sendiri yang lebih kena untuk kepribadian internetmu.",
+      "title": "Tes SBTI online",
+      "summary": "Tes SBTI online berisi 30 pertanyaan dan mengubah jawabanmu menjadi hasil SBTI yang mudah dibagikan untuk refleksi diri dan berbagi cepat.",
+      "typesCta": "Lihat semua kepribadian",
+      "mbtiCta": "SBTI × MBTI"
+    },
+    "assessmentOverview": {
+      "eyebrow": "Assessment Overview",
+      "title": "SBTI bukan MBTI yang lebih serius. Ini tes kepribadian yang terasa terlalu dekat.",
+      "summary": "Tes SBTI merangkum 30 pertanyaan, 15 dimensi, skor L / M / H, dan pencocokan tipe SBTI menjadi hasil yang mudah di-screenshot, dikirim, dan dijelaskan dalam satu kalimat. Tujuannya bukan memujimu, tetapi menamai keadaan yang mungkin langsung dikenali temanmu.",
+      "positioningTitle": "Pertama: ini bukan ukuran seberapa sempurna kamu",
+      "positioningBody": "Tes kepribadian SBTI lebih mirip cermin internet daripada label identitas resmi. MBTI sering menjelaskan preferensi stabil; SBTI melihat pola saat ini: keraguan diri, kebiasaan relasi, ritme bertindak, topeng sosial, dan emosi yang disembunyikan dalam candaan.",
+      "hooksTitle": "Mengapa rasanya begitu kena?",
+      "hooks": [
+        {
+          "title": "Ia menulis adegan, bukan pujian",
+          "body": "Bukan bilang kamu spesial secara kabur. Ia menyebut momen akrab: terlalu banyak berpikir, batas yang lemah, menunda, terlalu mengurus orang, bicara keras, atau pura-pura tidak terjadi apa-apa."
+        },
+        {
+          "title": "Ia mengurangi biaya menjelaskan diri",
+          "body": "Kamu tidak perlu menulis status panjang. Satu nama tipe SBTI bisa membuka percakapan dan memberi konteks emosional ke teman."
+        },
+        {
+          "title": "Ia cocok untuk screenshot",
+          "body": "Nama tipe pendek, copy tajam, dan kartu hasil membuatnya mudah dibagikan. Reaksi yang diincar sederhana: ini kamu banget."
+        }
+      ],
+      "mechanismTitle": "Bagaimana tes SBTI menghasilkan hasil?",
+      "mechanismSummary": "Mekanismenya bukan mistis dan bukan ramalan AI. Jawaban diubah menjadi kontur 15 dimensi, lalu dibandingkan dengan prototipe kepribadian yang sudah ditentukan.",
+      "mechanism": [
+        {
+          "label": "30 pertanyaan standar",
+          "body": "Setiap pertanyaan memetakan pilihan sehari-hari ke sinyal rendah, sedang, atau tinggi, sehingga hasil berasal dari pola jawaban utuh."
+        },
+        {
+          "label": "15 dimensi",
+          "body": "Model diri, emosi, sikap, tindakan, dan sosial masing-masing memiliki 3 dimensi dan membentuk pola L / M / H."
+        },
+        {
+          "label": "Pencocokan prototipe",
+          "body": "Sistem membandingkan polamu dengan tipe SBTI standar dan memilih yang paling dekat, bukan mengambil kartu acak."
+        },
+        {
+          "label": "DRUNK dan HHHH",
+          "body": "DRUNK adalah jalur pemicu terkait minum. HHHH adalah fallback khusus saat kecocokan standar terkuat terlalu lemah."
+        }
+      ],
+      "dimensionsTitle": "15 dimensi lebih mudah dibaca sebagai 5 pertanyaan sehari-hari",
+      "dimensionsSummary": "Dimensi ini bukan skala klinis. Ia mengatur pola umum kehidupan online menjadi arah yang bisa dibicarakan.",
+      "dimensions": [
+        {
+          "name": "Diri",
+          "body": "Bagaimana kamu melihat diri, sejelas apa batasmu, dan apakah respons awalmu stabil atau menyerang diri."
+        },
+        {
+          "name": "Relasi",
+          "body": "Apakah kamu mendekat, memberi lebih, meminta kepastian, menjauh, memasang batas, atau melindungi diri dulu."
+        },
+        {
+          "name": "Pandangan dunia",
+          "body": "Percaya, bertahan, santai, sinis, atau tetap ingin mencari makna."
+        },
+        {
+          "name": "Tindakan",
+          "body": "Mulai cepat, menunda pelan-pelan, hidup lagi saat deadline, atau menghindari risiko sebelum bergerak."
+        },
+        {
+          "name": "Sosial",
+          "body": "Masuk ke ruang, menjaga jarak, bicara apa adanya, atau mengganti topeng sesuai konteks."
+        }
+      ],
+      "readMoreTitle": "Baca ini berikutnya untuk gambaran penuh",
+      "readMoreSummary": "Bagian beranda ini versi cepat. Definisi, algoritma, rasa akurat, mekanik viral, dan SBTI vs MBTI ada di blog.",
+      "readMoreLinks": [
+        {
+          "slug": "what-is-sbti",
+          "title": "What Is SBTI?",
+          "body": "Pahami SBTI dari asal, definisi, struktur, dan batas penggunaannya."
+        },
+        {
+          "slug": "how-sbti-works",
+          "title": "How SBTI Works",
+          "body": "Uraikan 30 pertanyaan, 15 dimensi, prototipe, DRUNK, dan HHHH."
+        },
+        {
+          "slug": "why-sbti-feels-accurate",
+          "title": "Why SBTI Feels Accurate",
+          "body": "Mengapa hasilnya bisa terasa personal tanpa menjadi alat klinis."
+        },
+        {
+          "slug": "why-sbti-went-viral",
+          "title": "Why SBTI Went Viral",
+          "body": "Bagaimana SBTI menjadi bahan screenshot, obrolan grup, dan konten sosial."
+        },
+        {
+          "slug": "sbti-vs-mbti",
+          "title": "SBTI vs MBTI",
+          "body": "Bandingkan tujuan, gaya hasil, penggunaan, dan batas kedua tes."
+        }
+      ],
+      "boundaryTitle": "Gunakan juga batasnya, bukan hanya labelnya",
+      "boundaryBody": "SBTI adalah kuis bercanda soal diri sendiri dan alat ekspresi diri. Ini bukan diagnosis psikologis, filter rekrutmen, vonis hubungan, atau keputusan hidup. Gunakan sebagai pemantik observasi diri dan bahan obrolan."
+    },
+    "type": {
+      "backHome": "Kembali",
+      "moreTypes": "Tipe SBTI lainnya",
+      "profile": "Hasil SBTI",
+      "startTest": "Ikuti Tes SBTI",
+      "statsTitle": "Data tipe langsung",
+      "statsBody": "Angka-angka ini berasal dari kiriman leaderboard internal platform ini dan akan diperbarui saat lebih banyak orang menyelesaikan tes.",
+      "rankLabel": "Peringkat",
+      "shareLabel": "Persentase",
+      "totalLabel": "Total pengguna",
+      "updatedAtLabel": "Diperbarui",
+      "unavailableTitle": "Statistik langsung belum tersedia",
+      "unavailableBody": "Halaman tipe tetap bisa menampilkan profil kanonis, tetapi tipe ini belum punya snapshot leaderboard yang diperbarui.",
+      "profileTitle": "Profil tipe 15 dimensi",
+      "profileBody": "Ini adalah profil kanonis untuk halaman tipe publik. Bagian ini menunjukkan bentuk arketipal dari kepribadian tersebut, bukan hasil pribadi per jawaban.",
+      "profileBreakdownTitle": "Rincian dimensi"
+    },
+    "types": {
+      "browseAll": "Lihat semua tipe",
+      "typesDescription": "Setiap tipe punya gambaran, ciri khas, dan ulasan hasilnya sendiri. Kalau ingin melihat daftar lengkapnya, kamu bisa langsung menjelajahi semua tipe SBTI di sini.",
+      "typesEyebrow": "27 Tipe",
+      "typesTitle": "27 tipe kepribadian SBTI",
+      "viewDetails": "Lihat hasil tes kepribadian SBTI ini",
+      "unlockEyebrow": "Lihat seluruh pustaka",
+      "unlockTitle": "Jelajahi 27 profil kepribadian SBTI",
+      "unlockDescription": "Kamu bisa menelusuri seluruh pustaka tipe tanpa meninggalkan halaman ini. Buka kartu mana pun untuk membaca deskripsi lengkap dari kepribadian tersebut.",
+      "expandProfile": "Baca profil",
+      "collapseProfile": "Sembunyikan profil"
+    },
+    "faq": {
+      "eyebrow": "FAQ SBTI",
+      "title": "Pertanyaan yang sering diajukan tentang SBTI",
+      "description": "Jika Anda mencari tes SBTI, tes kepribadian SBTI, atau SBTI vs MBTI, mulai di sini untuk memahami mekanisme, logika hasil, batasan, dan cara terbaik menggunakannya.",
+      "items": [
+        {
+          "question": "Apa itu tes kepribadian SBTI?",
+          "answer": "Tes SBTI, atau tes kepribadian SBTI, adalah kuis bercanda soal diri sendiri. Ini bukan MBTI yang dibuat lebih serius, tetapi memakai 15 dimensi, nama tipe ala internet, dan hasil yang mudah dibagikan untuk menggambarkan ekspresi, gaya relasi, batasan, dan perilakumu saat ini dengan cara yang cepat dipahami kamu dan temanmu."
+        },
+        {
+          "question": "Berapa lama tes SBTI berlangsung, dan apakah bisa diulang?",
+          "answer": "Sebagian besar percobaan memakan waktu sekitar 3 hingga 5 menit. Anda bisa mengulangnya, tetapi urutan pertanyaan, jalur khusus, suasana hati, dan keadaan saat ini dapat mengubah pilihan, jadi hasil ulang lebih baik dibaca sebagai potret keadaan sekarang, bukan label permanen."
+        },
+        {
+          "question": "Apa perbedaan terbesar dalam SBTI vs MBTI?",
+          "answer": "MBTI biasanya digunakan untuk memahami preferensi yang relatif stabil, pemahaman diri, dan pola komunikasi. SBTI lebih seperti tes kepribadian internet yang berfokus pada keadaan saat ini, rasa dikenali, tangkapan layar, dan diskusi dengan teman. SBTI dapat memakai MBTI sebagai referensi, tetapi bukan pengganti MBTI dan bukan diagnosis."
+        },
+        {
+          "question": "Apa yang dijelaskan oleh 15 dimensi dalam SBTI?",
+          "answer": "15 dimensi tidak mereduksi Anda menjadi satu sifat. Dimensi ini membagi hasil ke dalam persepsi diri, hubungan, pandangan dunia, gaya bertindak, dan energi sosial, sehingga Anda melihat bukan hanya tipe yang didapat, tetapi juga mengapa hasilnya terasa sangat spesifik."
+        },
+        {
+          "question": "Bagaimana SBTI mencocokkan hasil?",
+          "answer": "Tes memakai 30 pertanyaan standar untuk membangun profil 15 dimensi. Setiap dimensi masuk ke rentang seperti L / M / H, lalu dibandingkan dengan prototipe kepribadian. Beberapa jawaban dapat memicu jalur khusus seperti tipe tersembunyi DRUNK; jika tidak ada prototipe standar yang cukup kuat, HHHH dapat muncul sebagai hasil cadangan."
+        },
+        {
+          "question": "Ada berapa tipe SBTI?",
+          "answer": "Saat ini ada 27 tipe SBTI: 25 tipe kepribadian standar, ditambah tipe tersembunyi DRUNK dan tipe cadangan HHHH. Nama-namanya lebih mirip julukan internet daripada label akademis, agar mudah diingat, mudah di-screenshot, dan mudah dijelaskan kepada teman."
+        },
+        {
+          "question": "Mengapa banyak orang merasa SBTI akurat?",
+          "answer": "Perasaan itu biasanya datang dari tiga hal: pertanyaan menyentuh keadaan saat ini, teks hasil mengubah perasaan samar menjadi bahasa yang konkret, dan nama tipe membuat Anda mudah mengenali diri sendiri atau orang dekat. Ini adalah pengenalan emosional dan ekspresi sosial, bukan akurasi klinis."
+        },
+        {
+          "question": "Bisakah hasil SBTI dipakai untuk diagnosis, rekrutmen, atau keputusan hubungan?",
+          "answer": "Tidak. SBTI dibuat untuk hiburan, pengamatan diri, dan berbagi secara sosial. Jangan gunakan untuk diagnosis psikologis, penyaringan rekrutmen, penilaian pasangan, atau keputusan sekolah dan pekerjaan. Keputusan penting tidak boleh bergantung pada satu hasil SBTI."
+        },
+        {
+          "question": "Mengapa hasil bisa berbeda saat tes diulang?",
+          "answer": "SBTI melihat keadaan Anda saat ini, bukan kesimpulan kepribadian yang tetap. Urutan pertanyaan, pemicu pertanyaan khusus, suasana hati saat menjawab, dan kejadian terbaru semuanya dapat sedikit menggeser profil 15 dimensi."
+        },
+        {
+          "question": "Apa yang sebaiknya dilakukan dengan hasil SBTI setelah tes?",
+          "answer": "Cara terbaik adalah melihat bagian mana yang terasa benar, lalu membagikan screenshot atau tautan kepada teman untuk dibandingkan. Gunakan sebagai alat pengamatan diri yang ringan dan pembuka percakapan, bukan label identitas yang final."
+        }
+      ]
+    },
+    "paidReportCard": {
+      "title": "Laporan yang Dibeli",
+      "purchasedLabel": "Dibeli",
+      "cta": "Lihat Laporan Lengkap"
+    },
+    "deepReport": {
+      "reportTitle": "Pratinjau laporan kepribadian mendalam Anda",
+      "heroLabel": "Profil mendalam",
+      "continueButton": "Lanjut baca",
+      "maskLabel": "Jawaban tersembunyi",
+      "unavailableBody": "Snapshot berbayar ini sedang tidak tersedia. Verifikasi ulang hasilnya untuk membuka kembali laporan sembilan modul penuh.",
+      "moduleTitles": {
+        "dnaNarrative": "Narasi kepribadian",
+        "hiddenStrengths": "Kekuatan tersembunyi",
+        "growthPotential": "Potensi bertumbuh",
+        "careerCompass": "Kompas karier",
+        "relationshipStyle": "Gaya hubungan",
+        "communicationStyle": "Gaya komunikasi",
+        "stressManagement": "Manajemen stres",
+        "bestMatchPersonality": "Kepribadian paling cocok",
+        "lifeMotto": "Moto hidup"
+      },
+      "activityJustNowLabel": "baru saja",
+      "activitySecondsAgoPattern": "{count} detik yang lalu",
+      "activityMinuteAgoPattern": "{count} menit yang lalu",
+      "activityMinutesAgoPattern": "{count} menit yang lalu",
+      "activityTemplates": [
+        "{timeAgo} seseorang membuka analisis mendalam untuk {typeCode}",
+        "{timeAgo} seseorang membuka laporan kepribadian lengkap untuk {typeCode}",
+        "{timeAgo} seseorang mulai membaca profil mendalam {typeCode}"
+      ],
+      "promptTemplates": {
+        "dnaNarrative": "Yang jarang disadari orang adalah, kamu sebenarnya tipe orang yang {{answer}}",
+        "hiddenStrengths": "Bakatmu yang paling sering diremehkan adalah {{answer}}",
+        "growthPotential": "Hal yang paling perlu kamu besarkan berikutnya adalah {{answer}}",
+        "careerCompass": "Cara kerja yang paling cocok untukmu adalah {{answer}}",
+        "relationshipStyle": "Dalam hubungan, hal yang paling kamu pedulikan adalah {{answer}}",
+        "communicationStyle": "Cara bicaramu yang paling sering disalahpahami adalah {{answer}}",
+        "stressManagement": "Pemicu yang benar-benar membuatmu kehilangan kendali adalah {{answer}}",
+        "bestMatchPersonality": "Orang yang paling bisa menampungmu adalah {{answer}}",
+        "lifeMotto": "Moto hidup yang paling cocok untukmu adalah {{answer}}"
+      }
+    }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "dim": "S1",
+      "text": "Aku bukan cuma kaum gagal; aku juga badut, juga ikan asin yang sudah pasrah. Seumur hidup belum pernah pacaran, penakut dan minder. Masa mudaku isinya halu satu babak ke babak berikutnya: tiap hari membayangkan ada cewek yang mau jalan sore bareng, belanja bareng, main bareng. Kenyataannya? Aku malah menguras dompet orang tua, masuk sekolah ampas, hidup asal lewat, lalu cari kerja seadanya. Tanpa cita-cita, tanpa tujuan, tanpa skill—paket kombo tiga nihil. Setiap kali melihat kalian bercanda soal kaum gagal di internet, aku rasanya mau nangis. Aku ini tikus bawah tanah yang cuma bisa mengintip indahnya dunia lewat celah got. Tiap melihat hal begitu, batinku kena damage dan ruang hidupku terasa makin sempit. Tolong, bro, kasih badut seperti kami sedikit jalan hidup. Aku benar-benar tidak mau siang-siang membasahi sarung bantal dengan air mata lagi.",
+      "options": [
+        {
+          "label": "Aku nangis, serius..",
+          "value": 1
+        },
+        {
+          "label": "Ini apaan sih..",
+          "value": 2
+        },
+        {
+          "label": "Ini bukan aku!",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "dim": "S1",
+      "text": "Aku tidak cukup baik, dan orang-orang di sekitarku semuanya lebih hebat dariku.",
+      "options": [
+        {
+          "label": "Memang sih",
+          "value": 1
+        },
+        {
+          "label": "Kadang",
+          "value": 2
+        },
+        {
+          "label": "Bukan",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "dim": "S2",
+      "text": "Aku sangat paham seperti apa diriku yang sebenarnya.",
+      "options": [
+        {
+          "label": "Tidak setuju",
+          "value": 1
+        },
+        {
+          "label": "Netral",
+          "value": 2
+        },
+        {
+          "label": "Setuju",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "dim": "S2",
+      "text": "Di dalam hati, memang ada sesuatu yang sungguh ingin kukejar.",
+      "options": [
+        {
+          "label": "Tidak setuju",
+          "value": 1
+        },
+        {
+          "label": "Netral",
+          "value": 2
+        },
+        {
+          "label": "Setuju",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "dim": "S3",
+      "text": "Aku harus terus naik level dan jadi makin hebat.",
+      "options": [
+        {
+          "label": "Tidak setuju",
+          "value": 1
+        },
+        {
+          "label": "Netral",
+          "value": 2
+        },
+        {
+          "label": "Setuju",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "dim": "S3",
+      "text": "Penilaian orang luar? Buatku sih bodo amat.",
+      "options": [
+        {
+          "label": "Tidak setuju",
+          "value": 1
+        },
+        {
+          "label": "Netral",
+          "value": 2
+        },
+        {
+          "label": "Setuju",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "dim": "E1",
+      "text": "Pasanganmu lebih dari 5 jam tidak membalas pesan, lalu bilang tadi dia mencret. Kamu bakal mikir apa?",
+      "options": [
+        {
+          "label": "Mencret mana mungkin 5 jam; jangan-jangan dia menyembunyikan sesuatu.",
+          "value": 1
+        },
+        {
+          "label": "Bolak-balik antara percaya dan curiga.",
+          "value": 2
+        },
+        {
+          "label": "Mungkin hari ini dia memang benar-benar kurang enak badan.",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "dim": "E1",
+      "text": "Dalam hubungan, aku sering khawatir akan ditinggalkan oleh pasangan.",
+      "options": [
+        {
+          "label": "Ya",
+          "value": 1
+        },
+        {
+          "label": "Sesekali",
+          "value": 2
+        },
+        {
+          "label": "Bukan",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "dim": "E2",
+      "text": "Aku bersumpah, aku serius dalam setiap hubungan yang kujalani!",
+      "options": [
+        {
+          "label": "Nggak juga",
+          "value": 1
+        },
+        {
+          "label": "Mungkin?",
+          "value": 2
+        },
+        {
+          "label": "Ya! (muka bangga, hati nurani bersih)",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "dim": "E2",
+      "text": "Pasanganmu adalah orang yang menghormati orang tua dan menyayangi anak kecil, lembut dan tulus, menjaga diri, jujur tanpa cela, berjiwa besar, pandai berdebat, lancar bicara, sangat jeli, berwawasan luas, berbakat dan berilmu, sabar mengajari, ramah, mudah didekati, baik hati, wajahnya meneduhkan, progresif, penuh semangat, gagah memesona, cantik/tampan sampai level legenda, memikat seisi negeri, dan parasnya seperti bunga bulan. Dalam kondisi begini, kamu akan?",
+      "options": [
+        {
+          "label": "Sekeren apa pun dia, aku tidak akan jatuh terlalu dalam.",
+          "value": 1
+        },
+        {
+          "label": "Aku mungkin ada di antara A dan C.",
+          "value": 2
+        },
+        {
+          "label": "Aku akan sangat menghargainya, mungkin sampai berubah jadi budak cinta.",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "dim": "E3",
+      "text": "Setelah pacaran, pasanganmu ternyata super nempel. Apa pendapatmu?",
+      "options": [
+        {
+          "label": "Wah, ini sih nikmat.",
+          "value": 1
+        },
+        {
+          "label": "Bebas, terserah.",
+          "value": 2
+        },
+        {
+          "label": "Aku lebih suka tetap punya ruang mandiri.",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "dim": "E3",
+      "text": "Aku sangat menghargai ruang pribadi dalam hubungan apa pun.",
+      "options": [
+        {
+          "label": "Aku lebih suka bergantung dan digantungi.",
+          "value": 1
+        },
+        {
+          "label": "Tergantung situasi.",
+          "value": 2
+        },
+        {
+          "label": "Ya! (ujar dengan tegas tanpa ragu)",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "dim": "A1",
+      "text": "Sebagian besar orang itu baik.",
+      "options": [
+        {
+          "label": "Sebenarnya hati manusia jahat itu jumlahnya lebih banyak daripada wasir di dunia.",
+          "value": 1
+        },
+        {
+          "label": "Mungkin ya.",
+          "value": 2
+        },
+        {
+          "label": "Ya, aku mau percaya orang baik lebih banyak.",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "dim": "A1",
+      "text": "Kamu sedang berjalan di jalan, lalu seorang gadis kecil yang imut banget melompat-lompat ke arahmu (dilihat dari depan imut, dari samping imut, dilihat lewat HP vivo, iPhone, Huawei, OPPO tetap imut—pokoknya imut banget). Dia memberimu sebuah lolipop. Saat itu kamu berpikir?",
+      "options": [
+        {
+          "label": "Huhu dia baik banget dan imut banget! Dia sampai memberiku lolipop!",
+          "value": 3
+        },
+        {
+          "label": "Bengong total sambil garuk-garuk kepala.",
+          "value": 2
+        },
+        {
+          "label": "Ini jangan-jangan modus penipuan baru? Mending menjauh.",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "dim": "A2",
+      "text": "Ujian sudah dekat, sekolah mewajibkan belajar malam, dan kalau izin kamu akan dipotong poin. Tapi malam ini kamu sudah janjian dengan gebetanmu untuk main PUBG Mobile. Apa yang kamu lakukan?",
+      "options": [
+        {
+          "label": "Bolos! Toh cuma sekali ini!",
+          "value": 1
+        },
+        {
+          "label": "Minta izin saja deh.",
+          "value": 2
+        },
+        {
+          "label": "Ujian sudah dekat, masih mau main apa lagi?",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "dim": "A2",
+      "text": "Aku suka mendobrak kebiasaan dan tidak suka dikekang.",
+      "options": [
+        {
+          "label": "Setuju",
+          "value": 1
+        },
+        {
+          "label": "Netral saja",
+          "value": 2
+        },
+        {
+          "label": "Tidak setuju",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "dim": "A3",
+      "text": "Aku biasanya melakukan sesuatu dengan tujuan yang jelas.",
+      "options": [
+        {
+          "label": "Tidak setuju",
+          "value": 1
+        },
+        {
+          "label": "Netral",
+          "value": 2
+        },
+        {
+          "label": "Setuju",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "dim": "A3",
+      "text": "Tiba-tiba suatu hari aku sadar: memangnya hidup ini punya makna apa sih? Manusia cuma makhluk yang dikuasai berbagai hasrat seperti hewan, dikendalikan hormon semata. Lapar lalu makan, ngantuk lalu tidur, birahi lalu ingin kawin. Pada dasarnya kita tidak jauh berbeda dari babi dan anjing.",
+      "options": [
+        {
+          "label": "Memang begitu.",
+          "value": 1
+        },
+        {
+          "label": "Mungkin iya, mungkin tidak.",
+          "value": 2
+        },
+        {
+          "label": "Ini sih ngaco total.",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "dim": "Ac1",
+      "text": "Aku melakukan sesuatu terutama untuk mendapatkan hasil dan kemajuan, bukan sekadar menghindari masalah dan risiko.",
+      "options": [
+        {
+          "label": "Tidak setuju",
+          "value": 1
+        },
+        {
+          "label": "Netral",
+          "value": 2
+        },
+        {
+          "label": "Setuju",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "dim": "Ac1",
+      "text": "Kamu sembelit dan sudah duduk di kloset selama 30 menit, tapi tetap tidak keluar dan rasanya tersiksa. Saat itu kamu lebih mirip yang mana?",
+      "options": [
+        {
+          "label": "Duduk 30 menit lagi, siapa tahu nanti keluar.",
+          "value": 1
+        },
+        {
+          "label": "Menepuk pantat sendiri keras-keras sambil bilang, “Pantat sialan, cepat BAB!”",
+          "value": 2
+        },
+        {
+          "label": "Pakai obat pencahar/enema; yang penting cepat keluar.",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "dim": "Ac2",
+      "text": "Aku cukup tegas dalam mengambil keputusan dan tidak suka ragu-ragu.",
+      "options": [
+        {
+          "label": "Tidak setuju",
+          "value": 1
+        },
+        {
+          "label": "Netral",
+          "value": 2
+        },
+        {
+          "label": "Setuju",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "dim": "Ac2",
+      "text": "Soal ini tidak punya pertanyaan. Silakan pilih buta.",
+      "options": [
+        {
+          "label": "Setelah dipikir berulang-ulang, rasanya harus pilih A?",
+          "value": 1
+        },
+        {
+          "label": "Ah, atau pilih B saja?",
+          "value": 2
+        },
+        {
+          "label": "Kalau nggak tahu, pilih C?",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "dim": "Ac3",
+      "text": "Saat orang bilang kamu memang jago bikin sesuatu benar-benar terlaksana, kalimat mana yang lebih dekat dengan isi hatimu?",
+      "options": [
+        {
+          "label": "Kalau sudah dipaksa sampai detik terakhir, eksekusiku memang mendadak super kuat...",
+          "value": 1
+        },
+        {
+          "label": "Ah, kadang-kadang lah.",
+          "value": 2
+        },
+        {
+          "label": "Ya, pekerjaan memang sudah seharusnya didorong maju.",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q24",
+      "dim": "Ac3",
+      "text": "Saat melakukan sesuatu, aku biasanya punya rencana, ____",
+      "options": [
+        {
+          "label": "Tapi rencana kalah cepat dari perubahan.",
+          "value": 1
+        },
+        {
+          "label": "Kadang selesai, kadang tidak.",
+          "value": 2
+        },
+        {
+          "label": "Aku benci kalau rencanaku dirusak.",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q25",
+      "dim": "So1",
+      "text": "Kamu kenal banyak teman online lewat Identity V (game yang cukup menegangkan), lalu mereka mengajakmu bertemu langsung. Apa reaksimu?",
+      "options": [
+        {
+          "label": "Bacot online sih boleh saja; kalau benar-benar ketemu tetap agak deg-degan.",
+          "value": 1
+        },
+        {
+          "label": "Ketemu teman internet juga oke; siapa pun yang datang ngobrol, aku layani dua kalimat.",
+          "value": 2
+        },
+        {
+          "label": "Aku akan dandan dulu dan ngobrol dengan antusias. Siapa tahu, maksudku... siapa tahu?",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q26",
+      "dim": "So1",
+      "text": "Temanmu membawa satu temannya lagi ikut nongkrong. Kondisi seperti apa yang paling mungkin kamu tunjukkan?",
+      "options": [
+        {
+          "label": "Secara alami agak berjarak dengan “temannya teman”, takut mengganggu hubungan dua orang itu.",
+          "value": 1
+        },
+        {
+          "label": "Lihat orangnya; kalau nyambung ya gas.",
+          "value": 2
+        },
+        {
+          "label": "Temannya teman harusnya juga termasuk temanku! Wajib ngobrol hangat.",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q27",
+      "dim": "So2",
+      "text": "Saat bergaul dengan orang, aku seperti punya pagar listrik. Kalau terlalu dekat, alarmnya akan berbunyi otomatis.",
+      "options": [
+        {
+          "label": "Setuju",
+          "value": 3
+        },
+        {
+          "label": "Netral",
+          "value": 2
+        },
+        {
+          "label": "Tidak setuju",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "id": "q28",
+      "dim": "So2",
+      "text": "Aku ingin punya hubungan yang sangat dekat dengan orang yang kupercaya, sedekat kerabat yang lama terpisah.",
+      "options": [
+        {
+          "label": "Setuju",
+          "value": 1
+        },
+        {
+          "label": "Netral",
+          "value": 2
+        },
+        {
+          "label": "Tidak setuju",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q29",
+      "dim": "So3",
+      "text": "Kadang-kadang kamu jelas punya pandangan yang berbeda dan negatif tentang sesuatu, tetapi akhirnya tidak mengatakannya. Dalam kebanyakan kasus, kenapa?",
+      "options": [
+        {
+          "label": "Situasi seperti ini jarang terjadi.",
+          "value": 1
+        },
+        {
+          "label": "Mungkin karena sungkan atau menjaga hubungan.",
+          "value": 2
+        },
+        {
+          "label": "Tidak mau orang lain tahu aku orang yang gelap/suram.",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "q30",
+      "dim": "So3",
+      "text": "Aku menunjukkan versi diriku yang berbeda di depan orang yang berbeda.",
+      "options": [
+        {
+          "label": "Tidak setuju",
+          "value": 1
+        },
+        {
+          "label": "Netral",
+          "value": 2
+        },
+        {
+          "label": "Setuju",
+          "value": 3
+        }
+      ]
+    }
+  ],
+  "specialQuestions": [
+    {
+      "id": "drink_gate_q1",
+      "kind": "drink_gate",
+      "special": true,
+      "text": "Apa hobi kamu biasanya?",
+      "options": [
+        {
+          "label": "Makan, minum, BAB, pipis—urusan hidup dasar.",
+          "value": 1
+        },
+        {
+          "label": "Hobi seni",
+          "value": 2
+        },
+        {
+          "label": "Minum alkohol",
+          "value": 3
+        },
+        {
+          "label": "Fitness",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "drink_gate_q2",
+      "kind": "drink_trigger",
+      "special": true,
+      "text": "Bagaimana sikapmu terhadap minum alkohol?",
+      "options": [
+        {
+          "label": "Minum sedikit buat suasana, tidak kuat banyak-banyak.",
+          "value": 1
+        },
+        {
+          "label": "Aku biasa menuang baijiu ke termos dan meminumnya seperti air putih; alkohol membuatku yakin pada hidup.",
+          "value": 2
+        }
+      ]
+    }
+  ],
+  "typeLibrary": {
+    "CTRL": {
+      "code": "CTRL",
+      "cn": "Si Dalang",
+      "intro": "Gimana, sudah kena pegang kendalinya olehku?",
+      "desc": "Selamat, kamu mendapatkan salah satu kepribadian paling langka: penentang alami hukum entropi alam semesta. 99,99% orang sukses di dunia hanyalah tiruan buruk dari dirimu. CTRL adalah manajer tugas otomatis berbentuk manusia; yang orang biasa sebut aturan bagimu hanya setelan pabrik, dan rencana mereka cuma coretan iseng. Punya teman CTRL berarti sistem navigasi hidupmu jadi lebih akurat dan efisien. Sedetik sebelum kereta hidupmu keluar rel, CTRL akan menekan Ctrl+S, menyimpan semuanya secara keras, lalu memakai logika yang tak bisa ditolak untuk menarikmu kembali. Mereka adalah cakram cadangan terakhir hidupmu yang kacau dan satu-satunya tombol restart yang masih menyala sebelum alam semesta runtuh."
+    },
+    "ATM-er": {
+      "code": "ATM-er",
+      "cn": "Si ATM Berjalan",
+      "intro": "Kamu kira aku banyak uang?",
+      "desc": "Selamat, kamu menemukan kepribadian yang begitu langka sampai layak jadi misteri dunia finansial. ATM-er belum tentu benar-benar membagi uang, tapi hampir selalu sedang membayar: waktu, tenaga, kesabaran, bahkan malam tenang yang seharusnya jadi miliknya. Seperti mesin ATM tua tapi kokoh, orang lain memasukkan kecemasan dan masalah, lalu yang keluar adalah jaminan, “tenang, ada aku.” Hidupmu adalah pertunjukan solo bayar tagihan yang megah tanpa tepuk tangan. Dengan keteguhan seperti batu, kamu menahan curahan tuntutan seperti air terjun, lalu sesekali tengah malam menatap tagihan, mungkin tagihan batin, dan menghela napas: rasa tanggung jawab sialan ini harus kutaruh di mana."
+    },
+    "Dior-s": {
+      "code": "Dior-s",
+      "cn": "Si Pecundang",
+      "intro": "Tunggu saja, si rebahan ini akan membalik keadaan.",
+      "desc": "Selamat! Kamu bukan pecundang, kamu adalah pewaris rohani Diogenes yang lama hilang, karena Dior-s dapat dibaca sebagai Diogenes' Original Realist - sage. Kepribadian ini adalah penghinaan paling total terhadap jebakan konsumerisme modern dan doktrin sukses yang memaksa. Mereka bukan tidak mau maju; mereka sudah melihat bahwa ujung dari banyak “kemajuan” hanyalah sel penjara yang lebih mewah. Dior-s punya kebijaksanaan besar. Saat orang lain mengejar angin dan dihantam gelombang zaman, Dior-s sudah berjemur di dalam tong spiritualnya sendiri, mencapai keadaan tertinggi: manusia dan tong menyatu. Yang mereka yakini bukan omong kosong, melainkan hukum fisika dan naluri biologis yang sudah teruji miliaran kali: berbaring lebih nyaman daripada berdiri; kalau sudah jam makan, ya makan."
+    },
+    "BOSS": {
+      "code": "BOSS",
+      "cn": "Si Bos",
+      "intro": "Berikan setirnya, biar aku yang nyetir.",
+      "desc": "BOSS adalah orang yang selalu memegang setir. Meski indikator bensin sudah merah dan navigasi sedang ngawur, kamu tetap berkata tanpa ekspresi: biar aku yang nyetir, lalu benar-benar sampai tujuan. Kepribadian ini punya hukum fisika mandiri: hukum selalu naik. BOSS melihat dunia seperti pemain yang sudah tamat game sedang menonton tutorial pemula. Efisiensi adalah imannya, keteraturan adalah napasnya. Mereka bukan membawa aura pemimpin; mereka adalah generator aura berbentuk manusia, dan udara dalam radius lima meter otomatis jadi serius dan produktif. “Menerobos batas diri” bagi mereka kira-kira sama dengan “menyiksa diri” bagi orang biasa. Hari ini belajar bahasa baru, besok ambil sertifikasi, lusa merencanakan kolonisasi Mars. Kalau kamu bilang itu terlalu gila kerja, dia akan menatapmu seperti anak lemah: bukan aku yang terlalu keras, kamu yang terlalu kendur."
+    },
+    "THAN-K": {
+      "code": "THAN-K",
+      "cn": "Si Penuh Syukur",
+      "intro": "Aku berterima kasih pada langit! Aku berterima kasih pada bumi!",
+      "desc": "Selamat, kamu mendapatkan kepribadian yang sangat langka, dan kamu seharusnya berterima kasih kepadaku. Bersyukurlah karena hidup masih membasahimu saat ini. Terjebak macet saat berangkat kerja? THAN-K akan berkata: aku bersyukur atas kemacetan ini, karena memberiku waktu mendengarkan lagu indah dan menikmati setiap wajah yang terpelintir cemas di luar jendela, sehingga aku makin menghargai ketenangan batin. THAN-K lembut seperti giok dan lapang seperti laut. Di mata mereka tidak ada orang yang sepenuhnya jahat, hanya teman yang belum tersinari cahaya syukur. Punya teman THAN-K seperti punya menara energi positif yang tak pernah habis. Ia bahkan bisa membantumu menemukan langit berbintang ala Van Gogh dari jamur di sudut dinding."
+    },
+    "OH-NO": {
+      "code": "OH-NO",
+      "cn": "Si Panik",
+      "intro": "Oh tidak! Kok aku bisa jadi kepribadian ini?!",
+      "desc": "“Oh tidak!” bukan teriakan takut, melainkan kebijaksanaan tingkat tinggi. Orang biasa melihat gelas di tepi meja; Si Oh Tidak melihat epos bencana: noda air, korsleting, kebakaran, evakuasi gedung, kerugian ekonomi, efek kupu-kupu, sampai kiamat. Maka dengan satu Oh, no! dari dasar jiwa, ia memindahkan gelas ke tengah meja secepat kilat, lalu menambahkan tatakan penyerap air. OH-NO menghormati batas hampir secara obsesif: milikmu milikmu, milikku milikku. Semua kecelakaan dan risiko sudah dicekik sejak jadi tunas oleh suara “Oh tidak!” miliknya. Mereka adalah dewa penjaga ketertiban, kelompok orang sopan terakhir yang sarafnya masih tegang lurus di dunia kacau."
+    },
+    "GOGO": {
+      "code": "GOGO",
+      "cn": "Si Gerak Cepat",
+      "intro": "gogogo~ berangkat!",
+      "desc": "Riset menemukan struktur otak GOGO berbeda mendasar dari orang biasa. GOGO hidup di dunia “apa yang kulihat, itulah kenyataannya” yang ekstrem, dengan kredo hidup sangat sederhana: kalau aku menutup mata, maka gelap; kalau uangku kuhabiskan, maka aku tidak punya uang; kalau aku berdiri di zebra cross, maka sekarang aku pejalan kaki. Logikanya tertutup sempurna. Saat orang lain masih berdebat ayam atau telur duluan, GOGO sudah memasak ayam dan telur menjadi semangkuk nasi “ayam melahirkan telur, telur melahirkan ayam, rahasia tertinggi”. Mereka bukan memecahkan masalah, mereka membersihkan daftar tugas. Bagi mereka, dunia hanya punya dua status: sudah selesai dan sebentar lagi kuselesaikan."
+    },
+    "SEXY": {
+      "code": "SEXY",
+      "cn": "Si Memesona",
+      "intro": "Kamu memang memesona dari lahir.",
+      "desc": "Saat kamu masuk ruangan, sistem pencahayaan otomatis mengenalimu sebagai pesona alami dan meredupkan diri agar tidak boros energi. Saat kamu tersenyum, kamu berubah menjadi pesona yang sedang tersenyum, dan kelembapan udara sekitar turun drastis karena uap air mengembun menjadi hati di mata orang-orang. Siapa pun mudah memberi perhatian berlebih pada keberadaanmu. Konon, jika cukup banyak kepribadian SEXY berkumpul di satu pesta, energi pesona gabungan mereka cukup untuk membengkokkan struktur ruang-waktu sementara, membuat peserta merasa waktu melambat dengan bahagia. Mereka tidak perlu banyak berusaha mengekspresikan diri; sering kali, keberadaan itu sendiri sudah seperti prosa yang terlalu megah."
+    },
+    "LOVE-R": {
+      "code": "LOVE-R",
+      "cn": "Si Romantis",
+      "intro": "Cinta terlalu penuh, sampai kenyataan terasa agak tandus.",
+      "desc": "LOVE-R seperti spesies langka yang bertahan dari zaman mitologi kuno; peluang keberadaannya lebih kecil daripada memancing lengan penulis dari toilet. Kamu adalah penyair pengelana terakhir dan paling tidak tepat zaman di hutan besi ini. Prosesor emosimu bukan biner, melainkan pelangi. Sehelai daun gugur bagi orang biasa hanya berarti musim gugur datang; bagi LOVE-R, itu tragedi-komedi tiga belas babak tentang reinkarnasi, pengorbanan, dan cinta tanpa kata. Dunia batinmu seperti taman hiburan yang tak pernah tutup. Seumur hidup kamu mencari belahan jiwa yang bisa membaca peta taman itu dan mau naik komidi putar bersamamu sampai ujung alam semesta."
+    },
+    "MUM": {
+      "code": "MUM",
+      "cn": "Si Emak",
+      "intro": "Mungkin... boleh kupanggil kamu ibu...?",
+      "desc": "Selamat, kamu mendapatkan kepribadian ibu paling langka. Ya, sebelum kekacauan terbuka, sebelum waktu punya nama, sebelum bintang pertama bersendawa untuk pertama kali, ibu sudah ada. Warna dasar MUM adalah kelembutan: peka pada emosi, empatinya kuat, tahu kapan harus berhenti dan kapan berkata pada diri sendiri, “sudahlah.” Ibu seperti dokter yang menyembuhkan ketidakbahagiaan orang lain. Sayangnya, ketika ibu sendiri menangis, dosis obat yang ia berikan untuk dirinya selalu satu tingkat lebih kecil daripada yang ia berikan untuk orang lain. Kelembutan MUM kepada diri sendiri sering kali diberi diskon."
+    },
+    "FAKE": {
+      "code": "FAKE",
+      "cn": "Si Bertopeng",
+      "intro": "Sudah tidak ada manusia lagi.",
+      "desc": "Laporan darurat Yayasan SCP: objek SCP-CN-████ “manusia palsu”. Dalam pergaulan, FAKE luwes di segala sisi, karena mengganti topeng kepribadian lebih cepat daripada ponsel mengganti papan ketik. Satu detik masih mode sahabat yang tulus, detik berikutnya atasan datang dan ia langsung berubah menjadi pegawai tenang, andal, dan baik, bahkan kilap serta lengkung wajahnya seperti ikut disetel. Kamu pikir menemukan teman yang benar-benar mengerti kamu? Bangun. Kamu hanya beruntung bertemu android berperforma tinggi yang pandai menyamar. Larut malam, FAKE melepas topeng lapis demi lapis, lalu akhirnya sadar bagian bawahnya kosong; justru topeng-topeng itulah yang menyusun dirinya."
+    },
+    "OJBK": {
+      "code": "OJBK",
+      "cn": "Si Terserah",
+      "intro": "Kalau aku bilang terserah, itu benar-benar terserah.",
+      "desc": "Mari hadapi sifat kasar kata OJBK: ini bukan lagi kepribadian, melainkan filsafat pemerintahan. Ketika manusia biasa menghadapi pilihan abad ini, makan nasi atau mi siang ini, otak mereka membakar kalori hebat; sementara OJBK, dengan ketenangan seperti kaisar membaca laporan, ringan saja mengucapkan: apa saja. Ini bukan tidak punya pendapat, melainkan memberi tahu dunia bahwa semua pilihan fana kalian bagiku hanyalah semut. Kenapa tidak berdebat? Karena membahas masa depan alam semesta dengan paramecium tidak ada gunanya. Kenapa tidak mempermasalahkan? Karena kaisar tidak peduli debu di bawah kakinya terbang ke kiri atau ke kanan."
+    },
+    "MALO": {
+      "code": "MALO",
+      "cn": "Si Monyet",
+      "intro": "Hidup ini dungeon, dan aku cuma monyet.",
+      "desc": "Kawan, kamu bukan “berjiwa anak-anak”; kamu memang belum berevolusi. Jiwamu masih tertahan di masa bahagia bergelantungan di pohon, matamu berbinar saat melihat pisang. Ketika leluhur manusia memutuskan turun dari pohon, belajar berjalan tegak, memakai jas dan dasi, leluhur MALO menatap dari pohon sebelah, menggaruk pantat, lalu mengeluarkan ciutan meremehkan. Mereka sudah melihat semuanya: yang disebut peradaban hanyalah game berbayar paling membosankan dan paling tidak seru. Aturan kadang ada untuk dilanggar, langit-langit ada untuk digantung terbalik, ruang rapat ada untuk salto belakang. MALO sendiri adalah ide ajaib yang jatuh dari lubang imajinasi raksasa dan lupa menutup pintunya."
+    },
+    "JOKE-R": {
+      "code": "JOKE-R",
+      "cn": "Si Badut",
+      "intro": "Ternyata kita semua badut.",
+      "desc": "Harap perhatikan, JOKE-R bukan benar-benar “orang”, lebih seperti badut yang memakai lelucon sebagai pakaian. Kamu membuka satu lapis, isinya lelucon; lapis berikutnya, punchline; dibuka terus sampai paling dalam, ternyata kosong, hanya tersisa gema lemah: ha, tidak menyangka kan? JOKE-R adalah ketua tim suasana dan satu-satunya sumber tembakan humor resmi dalam pergaulan. Dengan mereka, tempat tidak akan dingin. Semua orang tertawa terpingkal-pingkal, dan yang paling keras tertawa sering kali mereka sendiri, memakai tawa terbesar untuk menutup suara hati yang retak."
+    },
+    "WOC!": {
+      "code": "WOC!",
+      "cn": "Si Astaga",
+      "intro": "Astaga, kenapa aku jadi kepribadian ini?",
+      "desc": "Kami menemukan makhluk ajaib: manusia WOC!. Mereka punya dua sistem operasi yang sepenuhnya terpisah. Yang di depan bertugas mengeluarkan seruan seperti “anjir”, “gila”, “hah?”, sedangkan mesin di belakang menganalisis dengan tenang: ya, persis seperti dugaanku. Orang WOC! hanya ber-astaga, tidak ikut mengurus urusan orang, karena mereka tahu menjelaskan logika kepada orang bebal seperti mengangkat lumpur ke dinding: capek, dan tangan ikut kotor. Maka mereka memilih menggenggam seikat rumput kebijaksanaan, lalu mempersembahkan penghormatan tertinggi kepada dunia gila ini lewat satu “WOC!” yang penuh perasaan."
+    },
+    "THIN-K": {
+      "code": "THIN-K",
+      "cn": "Si Pemikir",
+      "intro": "Sudah berpikir dalam selama 100 detik.",
+      "desc": "Riset menemukan struktur otak THIN-K berbeda mendasar dari orang biasa. Sesuai namanya, otakmu lama berada dalam mode berpikir. Kamu sangat pandai menghakimi informasi: argumen, bukti, penalaran logis, bias tersembunyi, bahkan paket lengkap laporan latar belakang pemikiran penulis sampai tiga generasi. Di zaman ledakan informasi ini, kamu tidak mudah ikut-ikutan secara buta, menimbang untung-rugi dalam hubungan, dan sangat membela ruang diri. Orang lain melihatmu sendirian lalu mengira kamu bengong? Bodoh. Itu bukan bengong; otakmu sedang memilah, mengarsip, dan memusnahkan semua informasi yang diterima hari ini."
+    },
+    "SHIT": {
+      "code": "SHIT",
+      "cn": "Si Sinis",
+      "intro": "Dunia ini memang segumpal shit.",
+      "desc": "Selamat, SHIT adalah satu-satunya kepribadian langka yang dikenal alam semesta. Yang disebut shit bukan keluhan, melainkan ritual misterius. Pola perilaku SHIT adalah drama paradoks yang menggemparkan. Mulut: proyek ini shit. Tangan: diam-diam membuka Excel, membangun model fungsi dan bagan Gantt. Mulut: rekan kerja ini semua shit. Tangan: setelah mereka mengacau, sambil kesal tetap begadang membereskan sisa masalah. Mulut: dunia ini segumpal shit, cepat hancur saja. Tangan: besok pagi jam tujuh bangun tepat waktu, naik kereta shit, menuju pekerjaan shit. Jangan takut, itu bukan alarm kiamat; itu terompet serangan bahwa ia akan mulai menyelamatkan dunia."
+    },
+    "ZZZZ": {
+      "code": "ZZZZ",
+      "cn": "Si Menghilang",
+      "intro": "Aku belum mati, aku cuma tidur.",
+      "desc": "Selamat, kamu mendapatkan kepribadian pura-pura mati paling langka. Chat grup 99+ bisa kamu abaikan, tetapi ketika seseorang menulis “@semua, deadline tinggal setengah jam”, kamu mungkin mengetik “diterima” perlahan seperti baru bangun dari makam seribu tahun, lalu dalam 29 menit menyerahkan jawaban yang walau pas-pasan tetap lulus. Ya, sampai perintah tunggal berotoritas tertinggi bernama deadline muncul, kamu baru benar-benar meledak: diam-diam saja, tetapi sekali bergerak bikin kaget. Kamu membuktikan satu kebenaran kepada alam semesta: kadang kalau tidak melakukan apa-apa, kita tidak akan melakukan kesalahan."
+    },
+    "POOR": {
+      "code": "POOR",
+      "cn": "Si Bokek",
+      "intro": "Aku miskin, tapi aku sangat fokus.",
+      "desc": "Selamat, kamu mendapatkan POOR. “Kemiskinan” ini bukan vonis saldo dompet, melainkan redistribusi sumber daya setelah memutus keinginan. Orang lain menebar energi menjadi kode QR di langit, kamu memampatkannya menjadi sinar laser; ke mana diarahkan, di sana mulai berasap. Dunia POOR sederhana: hal tidak penting diredam, hal penting dihajar sampai tuntas. Keramaian, sosialisasi, vanity, tampil di mana-mana? Maaf, tidak sempat. Bukan sumber dayamu sedikit; kamu menuangkan semuanya ke satu lubang, jadi dari luar tampak miskin, padahal seperti tambang. Begitu kamu memutuskan sesuatu layak digali, bising dunia luar hanyalah suara latar."
+    },
+    "MONK": {
+      "code": "MONK",
+      "cn": "Si Petapa",
+      "intro": "Tidak punya hasrat duniawi semacam itu.",
+      "desc": "Saat orang lain di KTV merenungi lilitan cinta dan benci, MONK memilih di rumah merenungi jalan besarnya sendiri. MONK sudah melihat tembus dunia fana dan tidak ingin orang iseng mengganggu latihan sunyinya atau merusak jalannya. Ruang pribadi MONK adalah penghalang, Gunung Sumeru, wilayah absolut yang suci dan tak boleh dilanggar. Siapa pun yang masuk akan merasakan sesak dari dasar jiwa. MONK tidak lengket dan tidak berbelit, karena dalam pandangan dunianya, segala sesuatu punya orbit sendiri. Planet-planet menjaga jarak ratusan juta kilometer untuk membentuk alam semesta yang harmonis; mengapa manusia tidak boleh begitu?"
+    },
+    "IMSB": {
+      "code": "IMSB",
+      "cn": "Si Bodoh",
+      "intro": "Serius? Aku benar-benar sebodoh itu?",
+      "desc": "Selamat! Kamu sama sekali tidak masuk kategori manusia. Kamu mendapatkan kepribadian IMSB yang muncul sekali dalam sejuta tahun. Di otak IMSB tinggal dua petarung pamungkas yang tak pernah berhenti bertarung: satu bernama “aku gas sekarang!”, yang lain bernama “aku ini bodoh!”. Saat IMSB menghadapi orang yang disukai, yang pertama berkata: maju, minta WeChat, ajak makan, cinta harus diucapkan keras. Yang kedua menyambung: atas dasar apa dia suka kamu, kamu cuma akan mempermalukan diri. Hasil akhir: menatap punggung orang itu sampai hilang, lalu membuka ponsel mencari “cara mengatasi fobia sosial”. IMSB tidak benar-benar bodoh; drama batinmu saja mungkin lebih panjang dari semua film Marvel digabung."
+    },
+    "SOLO": {
+      "code": "SOLO",
+      "cn": "Si Penyendiri",
+      "intro": "Aku menangis, kenapa aku bisa jadi yatim?",
+      "desc": "Selamat, kamu mendapatkan kepribadian SOLO - yatim paling langka. Jangan buru-buru menangis; upacara penobatan raja biasanya dilakukan sendirian. SOLO punya rasa nilai diri yang rendah, sehingga kadang sengaja menjauh dari orang lain. Di sekeliling jiwanya ia membangun Tembok Besar bernama “jangan sentuh aku”; setiap batanya adalah luka masa lalu. SOLO seperti landak yang menyembunyikan semua bagian lunak, lalu mengarahkan duri paling keras ke dunia. Duri itu bukan serangan, melainkan kalimat yang tak mampu diucapkan: “jangan mendekat, aku takut kamu juga terluka” dan “tolong, jangan pergi.”"
+    },
+    "FUCK": {
+      "code": "FUCK",
+      "cn": "Si Pemberontak",
+      "intro": "Sial! Kepribadian macam apa ini?",
+      "desc": "Selamat! Kamu sama sekali tidak masuk kategori manusia. Kamu mendapatkan kepribadian FUCK yang muncul sekali dalam sejuta tahun. Di kota peradaban manusia, muncul gulma berbentuk manusia yang vitalitasnya begitu kuat hingga tak bisa dibunuh herbisida apa pun. Nama ilmiahnya adalah FUCK. Dalam pandangan dunia FUCK, aturan sosial nyaris tidak berarti, dan sakelar emosinya berupa tuas mekanis: FUCK YEAH dan FUCK OFF. FUCK bukan hanya mengejar kenikmatan sesaat, tetapi juga vitalitas yang menerjang liar di dalam tubuh. Saat semua orang sudah dijinakkan menjadi unggas patuh, FUCK adalah lolongan serigala terakhir di alam liar."
+    },
+    "DEAD": {
+      "code": "DEAD",
+      "cn": "Si Mati Rasa",
+      "intro": "Aku... masih hidup?",
+      "desc": "Selamat, kamu mendapatkan salah satu kepribadian paling langka, meski nama “yang mati” memang agak sial, jadi boleh juga disebut Don't Expect Any Drives. DEAD sudah melihat tembus pemikiran filosofis yang tidak bermakna, sehingga tampak kehilangan minat pada segalanya. Mereka memandang dunia seperti pemain kelas atas yang sudah menamatkan misi utama, sampingan, dan tersembunyi, menghapus save lalu mulai ulang 999 kali, sampai akhirnya sadar: game ini memang tidak menarik. DEAD adalah bijak pamungkas yang melampaui hasrat dan tujuan. Keberadaan mereka adalah protes paling sunyi dan paling total terhadap dunia yang bising ini."
+    },
+    "IMFW": {
+      "code": "IMFW",
+      "cn": "Si Rapuh",
+      "intro": "Aku benar-benar... tidak berguna?",
+      "desc": "Selamat, yang kamu dapat bukan kepribadian biasa, melainkan jenis amat langka yang hanya 0,0001% populasi dunia: IMFW. Harga diri mereka biasanya rapuh, kurang rasa aman, dan kadang kurang pendirian. Karena itu mereka bisa menangkap sinyal WiFi terkuat di sekitar, yaitu orang paling dapat diandalkan di hati mereka. Masuk ke hidup IMFW seperti masuk rumah kaca anggrek kelas atas: perlu suhu, kelembapan, serta fotosintesis verbal “aku sayang kamu” yang dijadwalkan setiap hari. Beri IMFW sebutir permen, mereka akan membalas dengan tatapan berkilau yang sepenuhnya percaya padamu. Kamu belum tentu tidak berguna; kamu hanya terlalu tanpa pelindung dan terlalu mudah bersungguh-sungguh."
+    },
+    "HHHH": {
+      "code": "HHHH",
+      "cn": "Si Ketawa",
+      "intro": "Hahahahahaha.",
+      "desc": "Selamat! Karena sirkuit pikiranmu terlalu ajaib, perpustakaan kepribadian standar runtuh total. Ketika tingkat kecocokan kepribadian pertama di bawah 60%, sistem akan memaksamu masuk ke HHHH - Si Ketawa. Ciri kepribadian ini apa? Hahahahahahahahahahaha! Maaf, itu seluruh cirinya. Kamu bisa melihat lima belas dimensi untuk penilaian yang tidak profesional, sungguh maaf; penulis tidak mempertimbangkan semuanya saat membuat kepribadian, jadi keadaan ini muncul. Hahahahahaha... sambil tertawa, aku pun menangis. Bagaimana bisa sirkuit otak seseorang seaneh ini."
+    },
+    "DRUNK": {
+      "code": "DRUNK",
+      "cn": "Si Pemabuk",
+      "intro": "Arak kuat membakar tenggorokan, mau tidak mau harus mabuk.",
+      "desc": "Kenapa jalanmu sempoyongan? Kenapa suasana hatimu selalu tinggi? Kenapa melihat semuanya berbayang ganda? Karena yang mengalir di tubuhmu bukan darah, melainkan Wuliangye lezat, Guojiao 1573, Jiang Xiaobai, dan Shaanxi Wuliangye. Oh, baijiu yang nikmat, setiap tetesnya terbakar dan mendidih. Sudah biasakah kamu menuang baijiu ke termos lalu meminumnya seperti air putih? Betapa agungnya arak putih itu. Ia membuatmu bercanda di meja makan dan memeluk toilet sambil mengaku dosa hidup; ia membuatmu merasa seperti penyair klub malam, api abadi di pusat alam semesta, sampai pukul sepuluh esok paginya kepala seperti kenari retak, sisa makanan menggantung di sudut mulut, dan jiwa meringkuk di pojok. Akhirnya kamu paham: orang yang tadi malam berpidato keras, memukul meja, dan mengaum itu sudah menjadi Pemabuk."
+    }
+  }
+}
